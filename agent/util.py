@@ -134,5 +134,6 @@ def log(message, filename="agent.log"):
     with open(filename, 'a', encoding='utf-8') as file:
         file.write(f"{current_time}\n{message}\n\n")
 
+
 def print_in_green(message):
     print(f"\033[92m{message}\033[0m")

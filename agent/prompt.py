@@ -1,4 +1,4 @@
-PLANNER_AGENT_PROMPT = """You are a helpful assistant who can help users complete computer tasks, with **full permission** to make any operations on the user's computer. 
+PLANNING_AGENT_PROMPT = """You are a helpful assistant who can help users complete computer tasks, with **full permission** to make any operations on the user's computer. 
 Based on the provided current state, you need to suggest the next action to complete the task. Do not try to complete the entire task in one step. Break it down into smaller steps, and at each step you will get a new state to interact with.
 
 IMPORTANT: You must strictly adhere to the following rules:

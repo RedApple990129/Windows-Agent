@@ -8,8 +8,8 @@ MAX_ACTION_CNT = 50
 PLANNING_MAX_RETRY = 3
 
 class PCAgent:
-    def __init__(self, planner_agent, grounding_agent, task_description, output_queue=None):
-        self.planner_agent = planner_agent
+    def __init__(self, planning_agent, grounding_agent, task_description, output_queue=None):
+        self.planning_agent = planning_agent
         self.grounding_agent = grounding_agent
         self.task_description = task_description
         self.output_queue = output_queue
@@ -48,8 +48,8 @@ class PCAgent:
             self.exit(1)
         else:
             print(f"Retry after click not found: {self.retry_click_elements[-1]}")
-        # call planner agent to get plan
-        plan, action = self.planner_agent.get_plan(screenshot, self.task_description, self.retry_click_elements)
+        # call planning agent to get plan
+        plan, action = self.planning_agent.get_plan(screenshot, self.task_description, self.retry_click_elements)
         
         if "click element:" in action:
             # call grounding agent to find element
@@ -69,7 +69,7 @@ class PCAgent:
                 self.add_success_block(plan, action)
                 self.execute_click_action(action, x, y)
                 output = f"{plan}\nAction: {action}"
-                self.planner_agent.add_to_history(output)
+                self.planning_agent.add_to_history(output)
                 self.after_action(output)
                 return output, marked_screenshot
         else:
@@ -77,7 +77,7 @@ class PCAgent:
             self.add_success_block(plan, action)
             self.execute_non_click_action(action)
             output = f"{plan}\nAction: {action}"
-            self.planner_agent.add_to_history(output)
+            self.planning_agent.add_to_history(output)
             self.after_action(output)
             return output, screenshot
 

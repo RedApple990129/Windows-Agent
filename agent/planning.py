@@ -1,11 +1,11 @@
-from prompt import PLANNER_AGENT_PROMPT
+from prompt import PLANNING_AGENT_PROMPT
 from util import *
 
-class PlannerAgent:
+class PlanningAgent:
     def __init__(self, plan_client):
         self.plan_client = plan_client
         self.plan_model = plan_client.models.list().data[0].id
-        print(f"Planner model: {self.plan_model}")
+        print(f"Planning model: {self.plan_model}")
         self.history = []
         self.HISTORY_CUT_OFF = 10
         
@@ -45,9 +45,9 @@ class PlannerAgent:
         
     def get_plan_instruction(self, task_description):
         """
-        generate the planner instruction
+        generate the planning instruction
         """
-        prompt = PLANNER_AGENT_PROMPT + f"Your task is: {task_description}\n\n"
+        prompt = PLANNING_AGENT_PROMPT + f"Your task is: {task_description}\n\n"
         
         if len(self.history) > self.HISTORY_CUT_OFF:
             history_str = "\n\n".join(f"[{i+1}] {item}" for i, item in enumerate(self.history[-self.HISTORY_CUT_OFF:]))
