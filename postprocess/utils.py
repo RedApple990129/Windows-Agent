@@ -95,6 +95,16 @@ def get_full_action(entry):
                 f' element {element} at' + action[insert_position:]
     return action
 
+def get_action_string(following_actions):
+    str = ""
+    for id, action in enumerate(following_actions):
+        str += f"{id+1}:\n{action}\n"
+    return str if str != "" else "None\n"
+
+def content_is_rational(content):
+    if "sorry, I can\'t assist" in content:
+        return False
+    return True
 
 def encode_image(image_path):
     """
