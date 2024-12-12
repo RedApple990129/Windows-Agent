@@ -31,7 +31,7 @@ To deploy:
 1. Build the executable (Windows):
 ```powershell
 cd tracker
-./package.ps1
+.\package.ps1
 ```
 2. Customize `tasks.json` according to your annotation needs
 3. Distribute to annotators
@@ -59,7 +59,7 @@ We provide a reference implementation of our multi-agent system in the `agent/` 
 python agent/main.py
 ```
 
-Reference scripts for deployment and training config can be found in `agent/server/` and `train/` directories respectively.
+Reference scripts for model deployment can be found in `agent/server/`  directory.
 
 ## Citation
 
