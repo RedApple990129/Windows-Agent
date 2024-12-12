@@ -20,3 +20,56 @@ This transfer is implemented through three key components:
 3. A multi-agent system combining a planning agent for decision-making with a grounding agent for robust visual grounding.
 
 ![overview](./assets/overview.png)
+
+## Quick Start
+
+### PC Tracker
+
+PC Tracker is a customizable infrastructure for human-computer interaction data collection. The source code in `tracker/` directory can be modified to fit your specific data collection requirements.
+
+To deploy:
+1. Build the executable (Windows):
+```powershell
+cd tracker
+./package.ps1
+```
+2. Customize `tasks.json` according to your annotation needs
+3. Distribute to annotators
+4. Collect annotation data from annotators - annotated data will be saved in the `events/` folder (hidden) under working directory
+
+For user instructions, please refer to our [PC Tracker User Manual](./tracker/README.md).
+
+### Post Processing
+
+To convert raw interaction data into cognitive trajectories, follow these steps:
+1. Place your data in the `postprocess/data/` directory. Example data is available in this directory for reference.
+2. Run post-processing pipeline:
+```bash
+python postprocess/refinement.py    # Data refinement
+python postprocess/completion.py    # Cognition completion
+```
+
+Note: You need to prepare your OpenAI API key in advance to perform cognition completion.
+
+### Agent
+
+We provide a reference implementation of our multi-agent system in the `agent/` directory, combining planning and grounding agents. To run:
+
+```bash
+python agent/main.py
+```
+
+Reference scripts for deployment and training config can be found in `agent/server/` and `train/` directories respectively.
+
+## Citation
+
+If you find this work helpful, please consider citing:
+
+```
+@article{pcagent,
+  title={PC Agent: While You Sleep, AI Works - A Cognitive Journey into Digital World},
+  author={},
+  journal={},
+  year={2024}
+}
+```
