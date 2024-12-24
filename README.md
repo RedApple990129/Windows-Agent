@@ -1,7 +1,7 @@
 # PC Agent
 
 This is the official repository for 
-[PC Agent: While You Sleep, AI Works - A Cognitive Journey into Digital World](https://arxiv.org/)
+[PC Agent: While You Sleep, AI Works - A Cognitive Journey into Digital World](https://arxiv.org/abs/2412.17589)
 
 ![animation](./assets/animation.png)
 
@@ -79,10 +79,11 @@ Reference scripts for model deployment can be found in `agent/server/`  director
 If you find this work helpful, please consider citing:
 
 ```
-@article{pcagent,
-  title={PC Agent: While You Sleep, AI Works - A Cognitive Journey into Digital World},
-  author={},
-  journal={},
-  year={2024}
+@article{he2024pcagent,
+      title={PC Agent: While You Sleep, AI Works - A Cognitive Journey into Digital World},
+      author={Yanheng He and Jiahe Jin and Shijie Xia and Jiadi Su and Runze Fan and Haoyang Zou and Xiangkun Hu and Pengfei Liu},
+      year={2024},
+      journal={arXiv preprint arXiv:2412.17589},
+      url={https://arxiv.org/abs/2412.17589}
 }
 ```
