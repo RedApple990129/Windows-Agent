@@ -6,7 +6,9 @@
   📘 <a href="" target="_blank">机器之心</a>
 </p>
 
-![animation](./assets/animation.png)
+<p align="center">
+  <img src="./assets/animation.png" width="70%" alt="animation">
+</p>
 
 ## Demo
 
