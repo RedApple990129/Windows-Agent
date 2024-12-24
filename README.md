@@ -1,7 +1,10 @@
-# PC Agent
+# PC Agent: While You Sleep, AI Works - A Cognitive Journey into Digital World
 
-This is the official repository for 
-[PC Agent: While You Sleep, AI Works - A Cognitive Journey into Digital World](https://arxiv.org/abs/2412.17589)
+<p align="center">
+  📄 <a href="https://arxiv.org/abs/2412.17589" target="_blank">Paper</a> &nbsp; | &nbsp;
+  🌐 <a href="https://gair-nlp.github.io/PC-Agent" target="_blank">Website</a> &nbsp; | &nbsp;
+  📘 <a href="" target="_blank">机器之心</a>
+</p>
 
 ![animation](./assets/animation.png)
 
