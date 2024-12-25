@@ -52,7 +52,7 @@ class TrackerApp:
 
     def initial_interface(self):
         self.clear_interface()
-        self.title_label.config(text="Welcome to OS Tracker!")
+        self.title_label.config(text="Welcome to PC Tracker!")
 
         self.task_button = tk.Button(
             self.root, text="Task Oriented Mode", command=self.task_oriented_interface,
