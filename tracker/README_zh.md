@@ -84,4 +84,4 @@ tracker 界面的异常显示（如部分按钮显示不全）可能是由于您
 
 ## 8. 联系方式
 
-- 如有任何疑问，请通过 henryhe_sjtu@sjtu.edu.cn 或 zizi0123@sjtu.edu.cn 与我们联系。
+如有任何疑问，请通过 henryhe_sjtu@sjtu.edu.cn 或 zizi0123@sjtu.edu.cn 与我们联系。

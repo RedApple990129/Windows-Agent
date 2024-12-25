@@ -86,4 +86,4 @@ If some interface elements (such as buttons) appear incomplete after launching t
 
 ## 8. Contact
 
-- If you have any questions, please contact us at henryhe_sjtu@sjtu.edu.cn or zizi0123@sjtu.edu.cn.
+If you have any questions, please contact us at henryhe_sjtu@sjtu.edu.cn or zizi0123@sjtu.edu.cn.
