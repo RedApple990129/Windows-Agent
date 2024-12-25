@@ -39,7 +39,7 @@ In this mode, you will be assigned an uncompleted task each time.
 - **Previous Task**: Click `Previous Task` to return to the next task.
 - **Bad Task Feedback**: If you think the current task is difficult to complete, click `Bad Task` to discard it permanently. Alternatively, you can start the task and modify its description after completion based on your actual execution.
 - **Start Recording**: Click `Start`, and the tracker window will automatically minimize while recording begins.
-- **End Task**: After completing the task, click `Finish` to save the process. Or if the task execution fails or you don’t want to record it, click `Fail`.
+- **End Task**: After completing the task, click `Finish` to save the record. Or if the task execution fails or you don’t want to record it, click `Fail`.
 - **Modify Task Description**: After finishing the task, you can modify the task description based on your actual execution.
 
 #### Free Task
@@ -79,6 +79,9 @@ If your screen resolution is not 16:9, it will affect the subsequent unified pro
 **3. How much space will the collected data approximately occupy?**
 
 The specific data size varies. Generally, even with intensive recording operations for 1 hour, it will not generate more than 1GB of data.
+
+**4. What should I do if the interface doesn't display properly after launching the tracker?**
+If some interface elements (such as buttons) appear incomplete after launching the software, this may be caused by your computer's display scaling settings. You can try adjusting the display scaling in Settings -> System -> Display, and then restart the software.
 
 ## 8. Contact
 
