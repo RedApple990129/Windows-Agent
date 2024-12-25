@@ -81,6 +81,7 @@ If your screen resolution is not 16:9, it will affect the subsequent unified pro
 The specific data size varies. Generally, even with intensive recording operations for 1 hour, it will not generate more than 1GB of data.
 
 **4. What should I do if the interface doesn't display properly after launching the tracker?**
+
 If some interface elements (such as buttons) appear incomplete after launching the software, this may be caused by your computer's display scaling settings. You can try adjusting the display scaling in Settings -> System -> Display, and then restart the software.
 
 ## 8. Contact
