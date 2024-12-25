@@ -3,7 +3,7 @@
 \[ [English](./README.md) | 中文 \]
 
 - Version: 1.0
-- Last updated: 2024-12-20
+- Last updated: 2024-12-25
 
 ## 1. 简介
 

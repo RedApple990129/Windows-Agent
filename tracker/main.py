@@ -27,7 +27,7 @@ class TrackerApp:
             family="Helvetica", size=26, weight="bold")
         self.label_font = tkFont.Font(family="Helvetica", size=18)
         self.button_font = tkFont.Font(family="Arial", size=12)
-        self.text_font = tkFont.Font(family="Helvetica", size=15)
+        self.text_font = tkFont.Font(family="Helvetica", size=12)
 
         # Label
         self.title_label = tk.Label(
@@ -43,7 +43,6 @@ class TrackerApp:
 
     def quit_app(self):
         self.tracker.stop()
-        self.tracker.folder_reset.reset()  # reset folder
         self.tracker.update_tasks()
         self.root.destroy()
 
@@ -140,6 +139,7 @@ class TrackerApp:
         if self.tracker.finish_all():
             messagebox.showinfo(
                 "Task Completed", "All tasks have been finished!")
+            self.initial_interface()
         else:
             self.clear_interface()
             self.title_label.config(text="Given Task Mode")
@@ -175,26 +175,26 @@ class TrackerApp:
             # left column
             self.previous_button = tk.Button(button_frame, text="Previous Task",
                                              command=self.previous_given_task_interface,
-                                             width=15, height=2, font=self.button_font)
+                                             width=15, height=1, font=self.button_font)
             self.previous_button.grid(row=0, column=0, padx=20, pady=10)
 
             self.next_button = tk.Button(button_frame, text="Next Task", command=self.next_given_task_interface,
-                                         width=15, height=2, font=self.button_font)
+                                         width=15, height=1, font=self.button_font)
             self.next_button.grid(row=1, column=0, padx=20, pady=10)
 
             # right column
             self.start_button = tk.Button(button_frame, text="Start", command=self.start_given_task_tracking,
-                                          width=15, height=2, font=self.button_font)
+                                          width=15, height=1, font=self.button_font)
             self.start_button.grid(row=0, column=1, padx=20, pady=10)
             ToolTip(self.start_button, "Start tracking with this task")
 
             self.bad_task_button = tk.Button(button_frame, text="Bad Task", command=self.mark_bad_task,
-                                             width=15, height=2, font=self.button_font)
+                                             width=15, height=1, font=self.button_font)
             self.bad_task_button.grid(row=1, column=1, padx=20, pady=10)
 
             # back button centered below the other buttons with the same size
             self.back_button = tk.Button(button_frame, text="Back", command=self.task_oriented_interface,
-                                         width=15, height=2, font=self.button_font)
+                                         width=15, height=1, font=self.button_font)
             self.back_button.grid(
                 row=2, column=0, columnspan=2, padx=20, pady=20)
 
@@ -230,7 +230,7 @@ class TrackerApp:
 
     def start_given_task_tracking(self):
         self.clear_interface()
-        self.tracker.start(True)
+        self.tracker.start()
 
         self.title_label.config(text="Tracking...")
         self.title_label.pack(pady=(30, 10))
@@ -301,8 +301,9 @@ class TrackerApp:
         )
 
         if confirm:
-            # Mark the task as not feasible if the user confirms
-            self.tracker.task.is_feasible = False
+            # Mark the task as bad if the user confirms
+            self.tracker.task.is_bad = True
+            self.tracker.bad_task_cnt += 1
             self.next_given_task_interface()
 
     def save_modified_description(self):
@@ -349,10 +350,10 @@ class TrackerApp:
         # Create info label
         self.description_label = tk.Label(
             self.root, text="Please enter task description:", font=("Helvetica", 15), bg="#f0f0f0")
-        self.description_label.pack(pady=(10, 5))
+        self.description_label.pack(pady=(5, 5))
 
         # Add input text box
-        self.entry = tk.Text(self.root, font=("Arial", 14),
+        self.entry = tk.Text(self.root, font=self.text_font,
                              width=120, height=20)  # Adjust width and height
         self.entry.pack(pady=(10, 10))  # Leave 25 pixels at top, 10 pixels at bottom
 
@@ -379,13 +380,13 @@ class TrackerApp:
 
         # Save button
         self.save_button = tk.Button(self.root, text="Save", command=self.save_free_task,
-                                     width=15, height=2, font=self.button_font)
+                                     width=15, height=1, font=self.button_font)
         self.save_button.pack(pady=(10, 20))
 
         # Discard button
         self.discard_button = tk.Button(
             self.root, text="Discard", command=self.discard_free_task,
-            width=15, height=2, font=self.button_font)
+            width=15, height=1, font=self.button_font)
         self.discard_button.pack(pady=(10, 20))
 
     def save_free_task(self):  # Save user-defined task

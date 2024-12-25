@@ -3,7 +3,7 @@
 \[ English | [中文](README_zh.md) \]
 
 - Version: 1.0
-- Last updated: 2024-12-20
+- Last updated: 2024-12-25
 
 ## 1. Introduction
 

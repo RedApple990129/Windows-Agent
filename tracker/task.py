@@ -1,7 +1,6 @@
 import json
 import os
 import time
-from fs import set_hidden_file
 
 
 def find_tasks_json():
@@ -26,14 +25,14 @@ task_cnt = 0
 
 
 class Task:
-    def __init__(self, description, id, level, file_input=None, category="other", finished=False, is_feasible=True):
+    def __init__(self, description, id, level, file_input=None, category="other", finished=False, is_bad=False):
         self.description = description
         self.level = level
         self.id = id
         self.category = category
         self.file_input = file_input
         self.finished = finished
-        self.is_feasible = is_feasible
+        self.is_bad = is_bad
 
 
 def from_json(task, task_cnt) -> Task:
@@ -67,7 +66,7 @@ def update_given_tasks(given_tasks):
     if tasks_path is None:
         return
     try:
-        set_hidden_file(tasks_path, False)
+        # set_hidden_file(tasks_path, False)
         with open(tasks_path, 'w') as file:
             json.dump(
                 [{'task': task.description,
@@ -75,11 +74,11 @@ def update_given_tasks(given_tasks):
                   'file_input': task.file_input,
                   'category': task.category,
                   'finished': task.finished}
-                 for task in given_tasks if task.is_feasible],
+                 for task in given_tasks if not task.is_bad],
                 file,
                 indent=2  # Set indentation to 2 spaces
             )
-        set_hidden_file(tasks_path, True)
+        # set_hidden_file(tasks_path, True)
     except Exception as e:
         print(e)
         # sleep for 10 seconds
@@ -88,7 +87,7 @@ def update_given_tasks(given_tasks):
 
 def update_task_cnt(finished_given_cnt, finished_free_cnt):
     print(f"update task cnt: {finished_given_cnt}, {finished_free_cnt}")
-    set_hidden_file(task_cnt_path, False)
+    # set_hidden_file(task_cnt_path, False)
     with open(task_cnt_path, 'w') as file:
         json.dump({'given_task': finished_given_cnt, 'free_task': finished_free_cnt}, file, indent=2)
-    set_hidden_file(task_cnt_path, True)
+    # set_hidden_file(task_cnt_path, True)
