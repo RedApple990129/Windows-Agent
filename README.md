@@ -12,7 +12,7 @@
 
 ## News
 
-- [2025/05/21] 🔥 [**PC Agent-E**](https://github.com/GAIR-NLP/PC-Agent-E/) is released, a new SOTA open-source model for Windows computer use. [[Paper](https://arxiv.org/pdf/2505.13909)] [[Model](https://huggingface.co/henryhe0123/PC-Agent-E)] [[Data](https://huggingface.co/datasets/henryhe0123/PC-Agent-E)] [[Code](https://github.com/GAIR-NLP/PC-Agent-E/)]
+- [2025/05/21] 🔥 **PC Agent-E** is released, a new SOTA open-source model for Windows computer use. [[Paper](https://arxiv.org/pdf/2505.13909)] [[Code](https://github.com/GAIR-NLP/PC-Agent-E/)] [[Model](https://huggingface.co/henryhe0123/PC-Agent-E)] [[Data](https://huggingface.co/datasets/henryhe0123/PC-Agent-E)]
 - [2024/12/24] 🔥 We released our [paper](https://arxiv.org/abs/2412.17589), [code](https://github.com/GAIR-NLP/PC-Agent/) and [project page](https://gair-nlp.github.io/PC-Agent/). Check it out!
 
 ## Demo
