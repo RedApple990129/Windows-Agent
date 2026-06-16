@@ -70,8 +70,6 @@ We provide a reference implementation of our multi-agent system in the `agent/` 
 ```bash
 python agent/main.py
 ```
-
-Reference scripts for model deployment can be found in `agent/server/`  directory.
       journal={arXiv preprint arXiv:2412.17589},
       url={https://arxiv.org/abs/2412.17589}
 }
