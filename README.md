@@ -1,19 +1,8 @@
-# PC Agent: While You Sleep, AI Works - A Cognitive Journey into Digital World
-
-<p align="center">
-  📄 <a href="https://arxiv.org/abs/2412.17589" target="_blank">Paper</a> &nbsp; | &nbsp;
-  🌐 <a href="https://gair-nlp.github.io/PC-Agent" target="_blank">Website</a> &nbsp; | &nbsp;
-  📘 <a href="https://mp.weixin.qq.com/s/2rAfmcRu7lPDg1uUv-qFCQ" target="_blank">机器之心</a>
-</p>
+# Windows Agent: While You Sleep, AI Works - A Cognitive Journey into Digital World
 
 <p align="center">
   <img src="./assets/animation.png" width="70%" alt="animation">
 </p>
-
-## News
-
-- [2025/05/21] 🔥 **PC Agent-E** is released, a new SOTA open-source model for Windows computer use. [[Paper](https://arxiv.org/pdf/2505.13909)] [[Code](https://github.com/GAIR-NLP/PC-Agent-E/)] [[Model](https://huggingface.co/henryhe0123/PC-Agent-E)] [[Data](https://huggingface.co/datasets/henryhe0123/PC-Agent-E)]
-- [2024/12/24] 🔥 We released our [paper](https://arxiv.org/abs/2412.17589), [code](https://github.com/GAIR-NLP/PC-Agent/) and [project page](https://gair-nlp.github.io/PC-Agent/). Check it out!
 
 ## Demo
 
@@ -83,16 +72,6 @@ python agent/main.py
 ```
 
 Reference scripts for model deployment can be found in `agent/server/`  directory.
-
-## Citation
-
-If you find this work helpful, please consider citing:
-
-```
-@article{he2024pcagent,
-      title={PC Agent: While You Sleep, AI Works - A Cognitive Journey into Digital World},
-      author={Yanheng He and Jiahe Jin and Shijie Xia and Jiadi Su and Runze Fan and Haoyang Zou and Xiangkun Hu and Pengfei Liu},
-      year={2024},
       journal={arXiv preprint arXiv:2412.17589},
       url={https://arxiv.org/abs/2412.17589}
 }
